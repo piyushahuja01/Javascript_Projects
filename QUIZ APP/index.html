@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Quiz</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body
+    class="min-h-screen bg-slate-100 px-4 py-5 sm:px-6 flex justify-center items-center"
+>
+
+    <div
+        id="outer"
+        class="relative w-[500px] max-w-[95vw] rounded-2xl border border-slate-200 bg-white px-5 py-5 shadow-xl sm:px-6 sm:py-5"
+    >
+
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-3">
+
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600">
+                    JavaScript Quiz
+                </p>
+
+                <p class="mt-0.5 text-[11px] text-slate-400">
+                    Test your coding knowledge
+                </p>
+            </div>
+
+            <p
+                class="rounded-full border border-blue-100 bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-700"
+            >
+                <span id="progress-ct">1</span>/10
+            </p>
+
+        </div>
+
+
+        <!-- Title -->
+        <div class="mb-4">
+
+            <h1
+                class="text-2xl font-extrabold tracking-tight text-slate-900"
+            >
+                Test Your Knowledge
+            </h1>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="mb-5">
+
+            <div
+                class="h-1.5 w-full overflow-hidden rounded-full bg-slate-100"
+            >
+                <div
+                    id="progress-bar"
+                    class="h-full w-[10%] rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-500"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <!-- Question -->
+        <div class="mb-4">
+
+            <span
+                class="mb-2 inline-flex rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-semibold text-slate-500"
+            >
+                Question
+            </span>
+
+            <p
+                id="question"
+                class="whitespace-pre-line text-lg font-bold leading-snug text-slate-900 sm:text-xl"
+            ></p>
+
+        </div>
+
+
+        <!-- Options -->
+        <ul id="options" class="space-y-2">
+
+
+            <li
+                id="option1"
+                class="option group flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-blue-400 hover:bg-blue-50/50 hover:shadow-sm sm:text-base"
+            >
+
+                <span
+                    class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700"
+                >
+                    A
+                </span>
+
+            </li>
+
+
+            <li
+                id="option2"
+                class="option group flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-blue-400 hover:bg-blue-50/50 hover:shadow-sm sm:text-base"
+            >
+
+                <span
+                    class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700"
+                >
+                    B
+                </span>
+
+            </li>
+
+
+            <li
+                id="option3"
+                class="option group flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-blue-400 hover:bg-blue-50/50 hover:shadow-sm sm:text-base"
+            >
+
+                <span
+                    class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700"
+                >
+                    C
+                </span>
+
+            </li>
+
+
+            <li
+                id="option4"
+                class="option group flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-blue-400 hover:bg-blue-50/50 hover:shadow-sm sm:text-base"
+            >
+
+                <span
+                    class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700"
+                >
+                    D
+                </span>
+
+            </li>
+
+        </ul>
+
+
+        <!-- Bottom -->
+        <div
+            class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4"
+        >
+
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+
+                <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+
+                <span class="hidden sm:block">
+                    Select an answer
+                </span>
+
+            </div>
+
+
+            <button
+                id="button"
+                class="group flex cursor-pointer items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95"
+            >
+                Next Question
+                <span class="transition-transform group-hover:translate-x-1">
+                    →
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
